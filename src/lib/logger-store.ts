@@ -44,19 +44,19 @@ export const useLoggerStore = create<LoggerState>()(
         })),
       logInfo: (message, source = "System", details, userId) =>
         set((state) => ({
-          logs: [{ id: `LOG-${uuidv4().substring(0, 8).toUpperCase()}`, timestamp: new Date().toISOString(), level: "INFO", source, message, details, userId }, ...state.logs].slice(0, 1000),
+          logs: [{ id: `LOG-${uuidv4().substring(0, 8).toUpperCase()}`, timestamp: new Date().toISOString(), level: "INFO" as LogLevel, source, message, details, userId }, ...state.logs].slice(0, 1000),
         })),
       logWarning: (message, source = "System", details) =>
         set((state) => ({
-          logs: [{ id: `LOG-${uuidv4().substring(0, 8).toUpperCase()}`, timestamp: new Date().toISOString(), level: "WARNING", source, message, details }, ...state.logs].slice(0, 1000),
+          logs: [{ id: `LOG-${uuidv4().substring(0, 8).toUpperCase()}`, timestamp: new Date().toISOString(), level: "WARNING" as LogLevel, source, message, details }, ...state.logs].slice(0, 1000),
         })),
       logError: (message, source = "System", details, statusCode) =>
         set((state) => ({
-          logs: [{ id: `LOG-${uuidv4().substring(0, 8).toUpperCase()}`, timestamp: new Date().toISOString(), level: "ERROR", source, message, details, statusCode }, ...state.logs].slice(0, 1000),
+          logs: [{ id: `LOG-${uuidv4().substring(0, 8).toUpperCase()}`, timestamp: new Date().toISOString(), level: "ERROR" as LogLevel, source, message, details, statusCode }, ...state.logs].slice(0, 1000),
         })),
       logDebug: (message, source = "System", details) =>
         set((state) => ({
-          logs: [{ id: `LOG-${uuidv4().substring(0, 8).toUpperCase()}`, timestamp: new Date().toISOString(), level: "DEBUG", source, message, details }, ...state.logs].slice(0, 1000),
+          logs: [{ id: `LOG-${uuidv4().substring(0, 8).toUpperCase()}`, timestamp: new Date().toISOString(), level: "DEBUG" as LogLevel, source, message, details }, ...state.logs].slice(0, 1000),
         })),
       clearLogs: () => set({ logs: [] }),
     }),

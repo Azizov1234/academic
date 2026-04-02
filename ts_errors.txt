@@ -1,4 +1,43 @@
-src/app/mentor/groups/page.tsx(82,98): error TS1127: Invalid character.
-src/app/mentor/groups/page.tsx(82,122): error TS1381: Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
-src/app/mentor/groups/page.tsx(82,123): error TS1381: Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
-src/app/mentor/groups/page.tsx(82,126): error TS1382: Unexpected token. Did you mean `{'>'}` or `&gt;`?
+src/app/admin/exams/page.tsx(5,16): error TS2724: '"lucide-react"' has no exported member named 'Construct'. Did you mean 'Construction'?
+src/app/mentor/exams/page.tsx(66,28): error TS2322: Type '{ children: Element; asChild: true; }' is not assignable to type 'IntrinsicAttributes & Props<unknown>'.
+  Property 'asChild' does not exist on type 'IntrinsicAttributes & Props<unknown>'.
+src/lib/logger-store.ts(46,13): error TS2345: Argument of type '(state: LoggerState) => { logs: (SystemLog | { id: string; timestamp: string; level: string; source: LogSource; message: string; details: string | undefined; userId: string | undefined; })[]; }' is not assignable to parameter of type 'LoggerState | Partial<LoggerState> | ((state: LoggerState) => LoggerState | Partial<LoggerState>)'.
+  Type '(state: LoggerState) => { logs: (SystemLog | { id: string; timestamp: string; level: string; source: LogSource; message: string; details: string | undefined; userId: string | undefined; })[]; }' is not assignable to type '(state: LoggerState) => LoggerState | Partial<LoggerState>'.
+    Type '{ logs: (SystemLog | { id: string; timestamp: string; level: string; source: LogSource; message: string; details: string | undefined; userId: string | undefined; })[]; }' is not assignable to type 'LoggerState | Partial<LoggerState>'.
+      Type '{ logs: (SystemLog | { id: string; timestamp: string; level: string; source: LogSource; message: string; details: string | undefined; userId: string | undefined; })[]; }' is not assignable to type 'Partial<LoggerState>'.
+        Types of property 'logs' are incompatible.
+          Type '(SystemLog | { id: string; timestamp: string; level: string; source: LogSource; message: string; details: string | undefined; userId: string | undefined; })[]' is not assignable to type 'SystemLog[]'.
+            Type 'SystemLog | { id: string; timestamp: string; level: string; source: LogSource; message: string; details: string | undefined; userId: string | undefined; }' is not assignable to type 'SystemLog'.
+              Type '{ id: string; timestamp: string; level: string; source: LogSource; message: string; details: string | undefined; userId: string | undefined; }' is not assignable to type 'SystemLog'.
+                Types of property 'level' are incompatible.
+                  Type 'string' is not assignable to type 'LogLevel'.
+src/lib/logger-store.ts(50,13): error TS2345: Argument of type '(state: LoggerState) => { logs: (SystemLog | { id: string; timestamp: string; level: string; source: LogSource; message: string; details: string | undefined; })[]; }' is not assignable to parameter of type 'LoggerState | Partial<LoggerState> | ((state: LoggerState) => LoggerState | Partial<LoggerState>)'.
+  Type '(state: LoggerState) => { logs: (SystemLog | { id: string; timestamp: string; level: string; source: LogSource; message: string; details: string | undefined; })[]; }' is not assignable to type '(state: LoggerState) => LoggerState | Partial<LoggerState>'.
+    Type '{ logs: (SystemLog | { id: string; timestamp: string; level: string; source: LogSource; message: string; details: string | undefined; })[]; }' is not assignable to type 'LoggerState | Partial<LoggerState>'.
+      Type '{ logs: (SystemLog | { id: string; timestamp: string; level: string; source: LogSource; message: string; details: string | undefined; })[]; }' is not assignable to type 'Partial<LoggerState>'.
+        Types of property 'logs' are incompatible.
+          Type '(SystemLog | { id: string; timestamp: string; level: string; source: LogSource; message: string; details: string | undefined; })[]' is not assignable to type 'SystemLog[]'.
+            Type 'SystemLog | { id: string; timestamp: string; level: string; source: LogSource; message: string; details: string | undefined; }' is not assignable to type 'SystemLog'.
+              Type '{ id: string; timestamp: string; level: string; source: LogSource; message: string; details: string | undefined; }' is not assignable to type 'SystemLog'.
+                Types of property 'level' are incompatible.
+                  Type 'string' is not assignable to type 'LogLevel'.
+src/lib/logger-store.ts(54,13): error TS2345: Argument of type '(state: LoggerState) => { logs: (SystemLog | { id: string; timestamp: string; level: string; source: LogSource; message: string; details: string | undefined; statusCode: number | undefined; })[]; }' is not assignable to parameter of type 'LoggerState | Partial<LoggerState> | ((state: LoggerState) => LoggerState | Partial<LoggerState>)'.
+  Type '(state: LoggerState) => { logs: (SystemLog | { id: string; timestamp: string; level: string; source: LogSource; message: string; details: string | undefined; statusCode: number | undefined; })[]; }' is not assignable to type '(state: LoggerState) => LoggerState | Partial<LoggerState>'.
+    Type '{ logs: (SystemLog | { id: string; timestamp: string; level: string; source: LogSource; message: string; details: string | undefined; statusCode: number | undefined; })[]; }' is not assignable to type 'LoggerState | Partial<LoggerState>'.
+      Type '{ logs: (SystemLog | { id: string; timestamp: string; level: string; source: LogSource; message: string; details: string | undefined; statusCode: number | undefined; })[]; }' is not assignable to type 'Partial<LoggerState>'.
+        Types of property 'logs' are incompatible.
+          Type '(SystemLog | { id: string; timestamp: string; level: string; source: LogSource; message: string; details: string | undefined; statusCode: number | undefined; })[]' is not assignable to type 'SystemLog[]'.
+            Type 'SystemLog | { id: string; timestamp: string; level: string; source: LogSource; message: string; details: string | undefined; statusCode: number | undefined; }' is not assignable to type 'SystemLog'.
+              Type '{ id: string; timestamp: string; level: string; source: LogSource; message: string; details: string | undefined; statusCode: number | undefined; }' is not assignable to type 'SystemLog'.
+                Types of property 'level' are incompatible.
+                  Type 'string' is not assignable to type 'LogLevel'.
+src/lib/logger-store.ts(58,13): error TS2345: Argument of type '(state: LoggerState) => { logs: (SystemLog | { id: string; timestamp: string; level: string; source: LogSource; message: string; details: string | undefined; })[]; }' is not assignable to parameter of type 'LoggerState | Partial<LoggerState> | ((state: LoggerState) => LoggerState | Partial<LoggerState>)'.
+  Type '(state: LoggerState) => { logs: (SystemLog | { id: string; timestamp: string; level: string; source: LogSource; message: string; details: string | undefined; })[]; }' is not assignable to type '(state: LoggerState) => LoggerState | Partial<LoggerState>'.
+    Type '{ logs: (SystemLog | { id: string; timestamp: string; level: string; source: LogSource; message: string; details: string | undefined; })[]; }' is not assignable to type 'LoggerState | Partial<LoggerState>'.
+      Type '{ logs: (SystemLog | { id: string; timestamp: string; level: string; source: LogSource; message: string; details: string | undefined; })[]; }' is not assignable to type 'Partial<LoggerState>'.
+        Types of property 'logs' are incompatible.
+          Type '(SystemLog | { id: string; timestamp: string; level: string; source: LogSource; message: string; details: string | undefined; })[]' is not assignable to type 'SystemLog[]'.
+            Type 'SystemLog | { id: string; timestamp: string; level: string; source: LogSource; message: string; details: string | undefined; }' is not assignable to type 'SystemLog'.
+              Type '{ id: string; timestamp: string; level: string; source: LogSource; message: string; details: string | undefined; }' is not assignable to type 'SystemLog'.
+                Types of property 'level' are incompatible.
+                  Type 'string' is not assignable to type 'LogLevel'.

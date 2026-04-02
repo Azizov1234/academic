@@ -63,8 +63,8 @@ export default function MentorExamsPage() {
           </div>
           
           <Dialog open={openCreate} onOpenChange={setOpenCreate}>
-            <DialogTrigger asChild>
-              <Button className="gap-2"><Plus className="h-4 w-4" /> Imtihon Belgilash</Button>
+            <DialogTrigger render={<Button className="gap-2" />}>
+              <Plus className="h-4 w-4" /> Imtihon Belgilash
             </DialogTrigger>
             <DialogContent className="max-w-md">
               <DialogHeader>

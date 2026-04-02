@@ -2,7 +2,7 @@
 
 import { DashboardLayout } from "@/components/layout/dashboard-layout";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
-import { Info, Construct } from "lucide-react";
+import { Info } from "lucide-react";
 
 export default function AdminExamsPage() {
   return (
