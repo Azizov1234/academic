@@ -1,0 +1,109 @@
+src/app/admin/attendance/page.tsx(9,23): error TS2307: Cannot find module '@/components/ui/label' or its corresponding type declarations.
+src/app/admin/attendance/page.tsx(85,43): error TS2322: Type 'Dispatch<SetStateAction<string>>' is not assignable to type '(value: string | null, eventDetails: SelectRootChangeEventDetails) => void'.
+  Types of parameters 'value' and 'value' are incompatible.
+    Type 'string | null' is not assignable to type 'SetStateAction<string>'.
+      Type 'null' is not assignable to type 'SetStateAction<string>'.
+src/app/admin/courses/page.tsx(9,23): error TS2307: Cannot find module '@/components/ui/label' or its corresponding type declarations.
+src/app/admin/courses/page.tsx(69,30): error TS2322: Type '{ children: Element; asChild: true; }' is not assignable to type 'IntrinsicAttributes & Props<unknown>'.
+  Property 'asChild' does not exist on type 'IntrinsicAttributes & Props<unknown>'.
+src/app/admin/courses/page.tsx(149,36): error TS2322: Type '{ children: Element; asChild: true; }' is not assignable to type 'IntrinsicAttributes & Props<unknown>'.
+  Property 'asChild' does not exist on type 'IntrinsicAttributes & Props<unknown>'.
+src/app/admin/courses/page.tsx(189,26): error TS2322: Type '{ children: Element[]; type: string; className: string; }' is not assignable to type 'IntrinsicAttributes & Props<any>'.
+  Property 'type' does not exist on type 'IntrinsicAttributes & Props<any>'.
+src/app/admin/dashboard/page.tsx(114,21): error TS2322: Type '(value: number) => [string, string]' is not assignable to type 'Formatter<ValueType, NameType> & ((value: ValueType, name: NameType, item: TooltipPayloadEntry, index: number, payload: TooltipPayload) => ReactNode | [...])'.
+  Type '(value: number) => [string, string]' is not assignable to type 'Formatter<ValueType, NameType>'.
+    Types of parameters 'value' and 'value' are incompatible.
+      Type 'ValueType | undefined' is not assignable to type 'number'.
+        Type 'undefined' is not assignable to type 'number'.
+src/app/admin/groups/page.tsx(18,23): error TS2307: Cannot find module '@/components/ui/label' or its corresponding type declarations.
+src/app/admin/groups/page.tsx(59,28): error TS2322: Type '{ children: Element; asChild: true; }' is not assignable to type 'IntrinsicAttributes & Props<unknown>'.
+  Property 'asChild' does not exist on type 'IntrinsicAttributes & Props<unknown>'.
+src/app/admin/groups/page.tsx(206,21): error TS2322: Type '{ children: Element; className: string; variant: "outline"; size: "sm"; asChild: true; }' is not assignable to type 'IntrinsicAttributes & ButtonProps & VariantProps<(props?: (ConfigVariants<{ variant: { default: string; outline: string; secondary: string; ghost: string; destructive: string; link: string; }; size: { ...; }; }> & ClassProp) | undefined) => string>'.
+  Property 'asChild' does not exist on type 'IntrinsicAttributes & ButtonProps & VariantProps<(props?: (ConfigVariants<{ variant: { default: string; outline: string; secondary: string; ghost: string; destructive: string; link: string; }; size: { ...; }; }> & ClassProp) | undefined) => string>'.
+src/app/admin/payments/page.tsx(9,23): error TS2307: Cannot find module '@/components/ui/label' or its corresponding type declarations.
+src/app/admin/payments/page.tsx(136,42): error TS2322: Type 'Dispatch<SetStateAction<string>>' is not assignable to type '(value: string | null, eventDetails: SelectRootChangeEventDetails) => void'.
+  Types of parameters 'value' and 'value' are incompatible.
+    Type 'string | null' is not assignable to type 'SetStateAction<string>'.
+      Type 'null' is not assignable to type 'SetStateAction<string>'.
+src/app/admin/payments/page.tsx(156,30): error TS2322: Type '{ children: Element; asChild: true; }' is not assignable to type 'IntrinsicAttributes & Props<unknown>'.
+  Property 'asChild' does not exist on type 'IntrinsicAttributes & Props<unknown>'.
+src/app/admin/students/page.tsx(23,23): error TS2307: Cannot find module '@/components/ui/label' or its corresponding type declarations.
+src/app/admin/students/page.tsx(74,28): error TS2322: Type '{ children: Element; asChild: true; }' is not assignable to type 'IntrinsicAttributes & Props<unknown>'.
+  Property 'asChild' does not exist on type 'IntrinsicAttributes & Props<unknown>'.
+src/app/admin/students/page.tsx(151,39): error TS2322: Type 'Dispatch<SetStateAction<string>>' is not assignable to type '(value: string | null, eventDetails: SelectRootChangeEventDetails) => void'.
+  Types of parameters 'value' and 'value' are incompatible.
+    Type 'string | null' is not assignable to type 'SetStateAction<string>'.
+      Type 'null' is not assignable to type 'SetStateAction<string>'.
+src/app/admin/students/page.tsx(160,40): error TS2322: Type 'Dispatch<SetStateAction<string>>' is not assignable to type '(value: string | null, eventDetails: SelectRootChangeEventDetails) => void'.
+  Types of parameters 'value' and 'value' are incompatible.
+    Type 'string | null' is not assignable to type 'SetStateAction<string>'.
+      Type 'null' is not assignable to type 'SetStateAction<string>'.
+src/app/admin/students/page.tsx(204,42): error TS2322: Type '{ children: Element; asChild: true; }' is not assignable to type 'IntrinsicAttributes & Props<unknown>'.
+  Property 'asChild' does not exist on type 'IntrinsicAttributes & Props<unknown>'.
+src/app/login/page.tsx(8,23): error TS2307: Cannot find module '@/components/ui/label' or its corresponding type declarations.
+src/app/mentor/dashboard/page.tsx(130,70): error TS2322: Type '{ children: Element; className: string; variant: "outline"; size: "sm"; asChild: true; }' is not assignable to type 'IntrinsicAttributes & ButtonProps & VariantProps<(props?: (ConfigVariants<{ variant: { default: string; outline: string; secondary: string; ghost: string; destructive: string; link: string; }; size: { ...; }; }> & ClassProp) | undefined) => string>'.
+  Property 'asChild' does not exist on type 'IntrinsicAttributes & ButtonProps & VariantProps<(props?: (ConfigVariants<{ variant: { default: string; outline: string; secondary: string; ghost: string; destructive: string; link: string; }; size: { ...; }; }> & ClassProp) | undefined) => string>'.
+src/app/mentor/dashboard/page.tsx(149,51): error TS2322: Type '{ children: Element; variant: "outline"; size: "sm"; asChild: true; }' is not assignable to type 'IntrinsicAttributes & ButtonProps & VariantProps<(props?: (ConfigVariants<{ variant: { default: string; outline: string; secondary: string; ghost: string; destructive: string; link: string; }; size: { ...; }; }> & ClassProp) | undefined) => string>'.
+  Property 'asChild' does not exist on type 'IntrinsicAttributes & ButtonProps & VariantProps<(props?: (ConfigVariants<{ variant: { default: string; outline: string; secondary: string; ghost: string; destructive: string; link: string; }; size: { ...; }; }> & ClassProp) | undefined) => string>'.
+src/app/mentor/dashboard/page.tsx(165,75): error TS2322: Type '{ children: Element; size: "sm"; variant: "outline"; className: string; asChild: true; }' is not assignable to type 'IntrinsicAttributes & ButtonProps & VariantProps<(props?: (ConfigVariants<{ variant: { default: string; outline: string; secondary: string; ghost: string; destructive: string; link: string; }; size: { ...; }; }> & ClassProp) | undefined) => string>'.
+  Property 'asChild' does not exist on type 'IntrinsicAttributes & ButtonProps & VariantProps<(props?: (ConfigVariants<{ variant: { default: string; outline: string; secondary: string; ghost: string; destructive: string; link: string; }; size: { ...; }; }> & ClassProp) | undefined) => string>'.
+src/app/mentor/dashboard/page.tsx(189,51): error TS2322: Type '{ children: Element; variant: "outline"; size: "sm"; asChild: true; }' is not assignable to type 'IntrinsicAttributes & ButtonProps & VariantProps<(props?: (ConfigVariants<{ variant: { default: string; outline: string; secondary: string; ghost: string; destructive: string; link: string; }; size: { ...; }; }> & ClassProp) | undefined) => string>'.
+  Property 'asChild' does not exist on type 'IntrinsicAttributes & ButtonProps & VariantProps<(props?: (ConfigVariants<{ variant: { default: string; outline: string; secondary: string; ghost: string; destructive: string; link: string; }; size: { ...; }; }> & ClassProp) | undefined) => string>'.
+src/app/mentor/homework/[id]/grade/page.tsx(9,23): error TS2307: Cannot find module '@/components/ui/label' or its corresponding type declarations.
+src/app/mentor/homework/[id]/grade/page.tsx(54,45): error TS2322: Type '{ children: Element; variant: "ghost"; size: "sm"; asChild: true; }' is not assignable to type 'IntrinsicAttributes & ButtonProps & VariantProps<(props?: (ConfigVariants<{ variant: { default: string; outline: string; secondary: string; ghost: string; destructive: string; link: string; }; size: { ...; }; }> & ClassProp) | undefined) => string>'.
+  Property 'asChild' does not exist on type 'IntrinsicAttributes & ButtonProps & VariantProps<(props?: (ConfigVariants<{ variant: { default: string; outline: string; secondary: string; ghost: string; destructive: string; link: string; }; size: { ...; }; }> & ClassProp) | undefined) => string>'.
+src/app/mentor/homework/[id]/grade/page.tsx(148,21): error TS2322: Type 'Dispatch<SetStateAction<number[]>>' is not assignable to type '(value: number | readonly number[], eventDetails: SliderRootChangeEventDetails) => void'.
+  Types of parameters 'value' and 'value' are incompatible.
+    Type 'number | readonly number[]' is not assignable to type 'SetStateAction<number[]>'.
+      Type 'number' is not assignable to type 'SetStateAction<number[]>'.
+src/app/mentor/homework/page.tsx(9,23): error TS2307: Cannot find module '@/components/ui/label' or its corresponding type declarations.
+src/app/mentor/homework/page.tsx(64,28): error TS2322: Type '{ children: Element; asChild: true; }' is not assignable to type 'IntrinsicAttributes & Props<unknown>'.
+  Property 'asChild' does not exist on type 'IntrinsicAttributes & Props<unknown>'.
+src/app/mentor/homework/page.tsx(162,89): error TS2322: Type '{ children: Element; size: "sm"; variant: "outline"; className: string; asChild: true; }' is not assignable to type 'IntrinsicAttributes & ButtonProps & VariantProps<(props?: (ConfigVariants<{ variant: { default: string; outline: string; secondary: string; ghost: string; destructive: string; link: string; }; size: { ...; }; }> & ClassProp) | undefined) => string>'.
+  Property 'asChild' does not exist on type 'IntrinsicAttributes & ButtonProps & VariantProps<(props?: (ConfigVariants<{ variant: { default: string; outline: string; secondary: string; ghost: string; destructive: string; link: string; }; size: { ...; }; }> & ClassProp) | undefined) => string>'.
+src/app/mentor/schedule/page.tsx(93,112): error TS2322: Type '{ children: Element; size: "sm"; variant: "outline"; className: string; asChild: true; }' is not assignable to type 'IntrinsicAttributes & ButtonProps & VariantProps<(props?: (ConfigVariants<{ variant: { default: string; outline: string; secondary: string; ghost: string; destructive: string; link: string; }; size: { ...; }; }> & ClassProp) | undefined) => string>'.
+  Property 'asChild' does not exist on type 'IntrinsicAttributes & ButtonProps & VariantProps<(props?: (ConfigVariants<{ variant: { default: string; outline: string; secondary: string; ghost: string; destructive: string; link: string; }; size: { ...; }; }> & ClassProp) | undefined) => string>'.
+src/app/mentor/schedule/page.tsx(112,82): error TS2322: Type '{ children: Element; variant: "outline"; className: string; asChild: true; }' is not assignable to type 'IntrinsicAttributes & ButtonProps & VariantProps<(props?: (ConfigVariants<{ variant: { default: string; outline: string; secondary: string; ghost: string; destructive: string; link: string; }; size: { ...; }; }> & ClassProp) | undefined) => string>'.
+  Property 'asChild' does not exist on type 'IntrinsicAttributes & ButtonProps & VariantProps<(props?: (ConfigVariants<{ variant: { default: string; outline: string; secondary: string; ghost: string; destructive: string; link: string; }; size: { ...; }; }> & ClassProp) | undefined) => string>'.
+src/app/mentor/schedule/page.tsx(113,57): error TS2304: Cannot find name 'FileText'.
+src/app/mentor/schedule/page.tsx(115,82): error TS2322: Type '{ children: Element; variant: "outline"; className: string; asChild: true; }' is not assignable to type 'IntrinsicAttributes & ButtonProps & VariantProps<(props?: (ConfigVariants<{ variant: { default: string; outline: string; secondary: string; ghost: string; destructive: string; link: string; }; size: { ...; }; }> & ClassProp) | undefined) => string>'.
+  Property 'asChild' does not exist on type 'IntrinsicAttributes & ButtonProps & VariantProps<(props?: (ConfigVariants<{ variant: { default: string; outline: string; secondary: string; ghost: string; destructive: string; link: string; }; size: { ...; }; }> & ClassProp) | undefined) => string>'.
+src/app/mentor/schedule/page.tsx(118,82): error TS2322: Type '{ children: Element; variant: "outline"; className: string; asChild: true; }' is not assignable to type 'IntrinsicAttributes & ButtonProps & VariantProps<(props?: (ConfigVariants<{ variant: { default: string; outline: string; secondary: string; ghost: string; destructive: string; link: string; }; size: { ...; }; }> & ClassProp) | undefined) => string>'.
+  Property 'asChild' does not exist on type 'IntrinsicAttributes & ButtonProps & VariantProps<(props?: (ConfigVariants<{ variant: { default: string; outline: string; secondary: string; ghost: string; destructive: string; link: string; }; size: { ...; }; }> & ClassProp) | undefined) => string>'.
+src/app/student/dashboard/page.tsx(171,21): error TS2322: Type '(v: number) => [string, string]' is not assignable to type 'Formatter<ValueType, NameType> & ((value: ValueType, name: NameType, item: TooltipPayloadEntry, index: number, payload: TooltipPayload) => ReactNode | [...])'.
+  Type '(v: number) => [string, string]' is not assignable to type 'Formatter<ValueType, NameType>'.
+    Types of parameters 'v' and 'value' are incompatible.
+      Type 'ValueType | undefined' is not assignable to type 'number'.
+        Type 'undefined' is not assignable to type 'number'.
+src/app/student/dashboard/page.tsx(222,51): error TS2322: Type '{ children: Element; variant: "outline"; size: "sm"; asChild: true; }' is not assignable to type 'IntrinsicAttributes & ButtonProps & VariantProps<(props?: (ConfigVariants<{ variant: { default: string; outline: string; secondary: string; ghost: string; destructive: string; link: string; }; size: { ...; }; }> & ClassProp) | undefined) => string>'.
+  Property 'asChild' does not exist on type 'IntrinsicAttributes & ButtonProps & VariantProps<(props?: (ConfigVariants<{ variant: { default: string; outline: string; secondary: string; ghost: string; destructive: string; link: string; }; size: { ...; }; }> & ClassProp) | undefined) => string>'.
+src/app/student/dashboard/page.tsx(253,67): error TS2322: Type '{ children: Element; size: "sm"; className: string; asChild: true; }' is not assignable to type 'IntrinsicAttributes & ButtonProps & VariantProps<(props?: (ConfigVariants<{ variant: { default: string; outline: string; secondary: string; ghost: string; destructive: string; link: string; }; size: { ...; }; }> & ClassProp) | undefined) => string>'.
+  Property 'asChild' does not exist on type 'IntrinsicAttributes & ButtonProps & VariantProps<(props?: (ConfigVariants<{ variant: { default: string; outline: string; secondary: string; ghost: string; destructive: string; link: string; }; size: { ...; }; }> & ClassProp) | undefined) => string>'.
+src/app/student/dashboard/page.tsx(280,39): error TS2322: Type '{ children: Element; size: "sm"; asChild: true; }' is not assignable to type 'IntrinsicAttributes & ButtonProps & VariantProps<(props?: (ConfigVariants<{ variant: { default: string; outline: string; secondary: string; ghost: string; destructive: string; link: string; }; size: { ...; }; }> & ClassProp) | undefined) => string>'.
+  Property 'asChild' does not exist on type 'IntrinsicAttributes & ButtonProps & VariantProps<(props?: (ConfigVariants<{ variant: { default: string; outline: string; secondary: string; ghost: string; destructive: string; link: string; }; size: { ...; }; }> & ClassProp) | undefined) => string>'.
+src/app/student/exams/page.tsx(16,23): error TS2307: Cannot find module '@/components/ui/label' or its corresponding type declarations.
+src/app/student/exams/page.tsx(141,75): error TS2322: Type '{ children: Element[]; className: string; onPointerDownOutside: (e: any) => any; }' is not assignable to type 'IntrinsicAttributes & DialogPopupProps & { showCloseButton?: boolean | undefined; }'.
+  Property 'onPointerDownOutside' does not exist on type 'IntrinsicAttributes & DialogPopupProps & { showCloseButton?: boolean | undefined; }'.
+src/app/student/exams/page.tsx(141,97): error TS7006: Parameter 'e' implicitly has an 'any' type.
+src/app/student/progress/page.tsx(175,21): error TS2322: Type '(v: number, n: string) => [string, string]' is not assignable to type 'Formatter<ValueType, NameType> & ((value: ValueType, name: NameType, item: TooltipPayloadEntry, index: number, payload: TooltipPayload) => ReactNode | [...])'.
+  Type '(v: number, n: string) => [string, string]' is not assignable to type 'Formatter<ValueType, NameType>'.
+    Types of parameters 'v' and 'value' are incompatible.
+      Type 'ValueType | undefined' is not assignable to type 'number'.
+        Type 'undefined' is not assignable to type 'number'.
+src/app/student/units/page.tsx(135,61): error TS2322: Type '{ children: Element; size: "sm"; className: string; asChild: true; }' is not assignable to type 'IntrinsicAttributes & ButtonProps & VariantProps<(props?: (ConfigVariants<{ variant: { default: string; outline: string; secondary: string; ghost: string; destructive: string; link: string; }; size: { ...; }; }> & ClassProp) | undefined) => string>'.
+  Property 'asChild' does not exist on type 'IntrinsicAttributes & ButtonProps & VariantProps<(props?: (ConfigVariants<{ variant: { default: string; outline: string; secondary: string; ghost: string; destructive: string; link: string; }; size: { ...; }; }> & ClassProp) | undefined) => string>'.
+src/app/superadmin/centers/page.tsx(9,23): error TS2307: Cannot find module '@/components/ui/label' or its corresponding type declarations.
+src/app/superadmin/centers/page.tsx(46,28): error TS2322: Type '{ children: Element; asChild: true; }' is not assignable to type 'IntrinsicAttributes & Props<unknown>'.
+  Property 'asChild' does not exist on type 'IntrinsicAttributes & Props<unknown>'.
+src/app/superadmin/dashboard/page.tsx(187,70): error TS2322: Type '{ children: Element; variant: "outline"; size: "sm"; className: string; asChild: true; }' is not assignable to type 'IntrinsicAttributes & ButtonProps & VariantProps<(props?: (ConfigVariants<{ variant: { default: string; outline: string; secondary: string; ghost: string; destructive: string; link: string; }; size: { ...; }; }> & ClassProp) | undefined) => string>'.
+  Property 'asChild' does not exist on type 'IntrinsicAttributes & ButtonProps & VariantProps<(props?: (ConfigVariants<{ variant: { default: string; outline: string; secondary: string; ghost: string; destructive: string; link: string; }; size: { ...; }; }> & ClassProp) | undefined) => string>'.
+src/app/superadmin/dashboard/page.tsx(204,49): error TS2322: Type '{ children: Element; variant: "outline"; size: "sm"; asChild: true; }' is not assignable to type 'IntrinsicAttributes & ButtonProps & VariantProps<(props?: (ConfigVariants<{ variant: { default: string; outline: string; secondary: string; ghost: string; destructive: string; link: string; }; size: { ...; }; }> & ClassProp) | undefined) => string>'.
+  Property 'asChild' does not exist on type 'IntrinsicAttributes & ButtonProps & VariantProps<(props?: (ConfigVariants<{ variant: { default: string; outline: string; secondary: string; ghost: string; destructive: string; link: string; }; size: { ...; }; }> & ClassProp) | undefined) => string>'.
+src/components/layout/top-nav.tsx(85,32): error TS2322: Type '{ children: Element; asChild: true; }' is not assignable to type 'IntrinsicAttributes & Props<unknown>'.
+  Property 'asChild' does not exist on type 'IntrinsicAttributes & Props<unknown>'.
+src/components/layout/top-nav.tsx(110,66): error TS2322: Type '{ children: Element; variant: "ghost"; size: "icon"; className: string; asChild: true; }' is not assignable to type 'IntrinsicAttributes & ButtonProps & VariantProps<(props?: (ConfigVariants<{ variant: { default: string; outline: string; secondary: string; ghost: string; destructive: string; link: string; }; size: { ...; }; }> & ClassProp) | undefined) => string>'.
+  Property 'asChild' does not exist on type 'IntrinsicAttributes & ButtonProps & VariantProps<(props?: (ConfigVariants<{ variant: { default: string; outline: string; secondary: string; ghost: string; destructive: string; link: string; }; size: { ...; }; }> & ClassProp) | undefined) => string>'.
+src/components/layout/top-nav.tsx(123,32): error TS2322: Type '{ children: Element; asChild: true; }' is not assignable to type 'IntrinsicAttributes & Props<unknown>'.
+  Property 'asChild' does not exist on type 'IntrinsicAttributes & Props<unknown>'.
+src/components/layout/top-nav.tsx(145,31): error TS2322: Type '{ children: Element; asChild: true; }' is not assignable to type 'IntrinsicAttributes & MenuItemProps & { inset?: boolean | undefined; variant?: "default" | "destructive" | undefined; }'.
+  Property 'asChild' does not exist on type 'IntrinsicAttributes & MenuItemProps & { inset?: boolean | undefined; variant?: "default" | "destructive" | undefined; }'.

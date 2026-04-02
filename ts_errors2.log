@@ -1,0 +1,23 @@
+src/app/admin/courses/page.tsx(185,26): error TS2322: Type '{ children: Element[]; type: string; className: string; }' is not assignable to type 'IntrinsicAttributes & Props<any>'.
+  Property 'type' does not exist on type 'IntrinsicAttributes & Props<any>'.
+src/app/admin/dashboard/page.tsx(114,21): error TS2322: Type '(value: number) => [string, string]' is not assignable to type 'Formatter<ValueType, NameType> & ((value: ValueType, name: NameType, item: TooltipPayloadEntry, index: number, payload: TooltipPayload) => ReactNode | [...])'.
+  Type '(value: number) => [string, string]' is not assignable to type 'Formatter<ValueType, NameType>'.
+    Types of parameters 'value' and 'value' are incompatible.
+      Type 'ValueType | undefined' is not assignable to type 'number'.
+        Type 'undefined' is not assignable to type 'number'.
+src/app/mentor/homework/[id]/grade/page.tsx(146,64): error TS2345: Argument of type 'number | readonly number[]' is not assignable to parameter of type 'SetStateAction<number[]>'.
+  Type 'number' is not assignable to type 'SetStateAction<number[]>'.
+src/app/mentor/schedule/page.tsx(110,132): error TS2304: Cannot find name 'FileText'.
+src/app/student/dashboard/page.tsx(171,21): error TS2322: Type '(v: number) => [string, string]' is not assignable to type 'Formatter<ValueType, NameType> & ((value: ValueType, name: NameType, item: TooltipPayloadEntry, index: number, payload: TooltipPayload) => ReactNode | [...])'.
+  Type '(v: number) => [string, string]' is not assignable to type 'Formatter<ValueType, NameType>'.
+    Types of parameters 'v' and 'value' are incompatible.
+      Type 'ValueType | undefined' is not assignable to type 'number'.
+        Type 'undefined' is not assignable to type 'number'.
+src/app/student/exams/page.tsx(141,75): error TS2322: Type '{ children: Element[]; className: string; onPointerDownOutside: (e: any) => any; }' is not assignable to type 'IntrinsicAttributes & DialogPopupProps & { showCloseButton?: boolean | undefined; }'.
+  Property 'onPointerDownOutside' does not exist on type 'IntrinsicAttributes & DialogPopupProps & { showCloseButton?: boolean | undefined; }'.
+src/app/student/exams/page.tsx(141,97): error TS7006: Parameter 'e' implicitly has an 'any' type.
+src/app/student/progress/page.tsx(175,21): error TS2322: Type '(v: number, n: string) => [string, string]' is not assignable to type 'Formatter<ValueType, NameType> & ((value: ValueType, name: NameType, item: TooltipPayloadEntry, index: number, payload: TooltipPayload) => ReactNode | [...])'.
+  Type '(v: number, n: string) => [string, string]' is not assignable to type 'Formatter<ValueType, NameType>'.
+    Types of parameters 'v' and 'value' are incompatible.
+      Type 'ValueType | undefined' is not assignable to type 'number'.
+        Type 'undefined' is not assignable to type 'number'.
