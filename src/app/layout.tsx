@@ -1,7 +1,8 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import { Toaster } from "@/components/ui/sonner";
+import GlobalLogInterceptor from "@/components/providers/log-interceptor";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -18,6 +19,9 @@ export const metadata: Metadata = {
     "Ingliz tili o'quv markazi uchun to'liq CRM tizimi. O'qituvchilar, studentlar va administratorlar uchun zamonaviy platforma.",
   keywords: ["english", "cefr", "learning", "crm", "academy", "education"],
   authors: [{ name: "Academy CEFR" }],
+};
+
+export const viewport: Viewport = {
   themeColor: [
     { media: "(prefers-color-scheme: light)", color: "#f5f3ff" },
     { media: "(prefers-color-scheme: dark)", color: "#0f0f1a" },
@@ -31,7 +35,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="uz" className={`${inter.variable} h-full antialiased`} suppressHydrationWarning>
-      <body className="min-h-full flex flex-col">
+      <body className="min-h-full flex flex-col" suppressHydrationWarning>
+        <GlobalLogInterceptor />
         {children}
         <Toaster richColors position="top-right" />
       </body>

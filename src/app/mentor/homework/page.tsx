@@ -100,8 +100,9 @@ export default function MentorHomeworkPage() {
                   <Select>
                     <SelectTrigger><SelectValue placeholder="Guruh tanlang" /></SelectTrigger>
                     <SelectContent>
-                      <SelectItem value="g1">IELTS Advanced A</SelectItem>
-                      <SelectItem value="g2">Beginners B</SelectItem>
+                      <SelectItem value="GRP-101">General English Upper-Int (B2)</SelectItem>
+                      <SelectItem value="GRP-102">CEFR Preparation (C1)</SelectItem>
+                      <SelectItem value="GRP-103">IELTS Foundation (B1+)</SelectItem>
                     </SelectContent>
                   </Select>
                 </div>

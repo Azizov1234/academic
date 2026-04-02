@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { useAuthStore } from "@/lib/auth-store";
+import { useLoggerStore } from "@/lib/logger-store";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
@@ -29,6 +30,7 @@ const ROLE_ROUTES: Record<Role, string> = {
 
 export default function LoginPage() {
   const { login } = useAuthStore();
+  const { logInfo, logError } = useLoggerStore();
   const router = useRouter();
   const [email, setEmail] = useState("admin@academy.uz");
   const [password, setPassword] = useState("admin123");
@@ -44,9 +46,11 @@ export default function LoginPage() {
 
     if (result.success) {
       const user = useAuthStore.getState().user;
+      logInfo("Foydalanuvchi tizimga kirdi", "Auth", `Role: ${user?.role}, Email: ${email}`, user?.id);
       toast.success("Muvaffaqiyatli kirildi!");
       router.push(ROLE_ROUTES[user!.role]);
     } else {
+      logError("Tizimga kirish muvaffaqiyatsiz bo'ldi", "Auth", `Email: ${email}. Sabab: ${result.error}`, 401);
       toast.error(result.error || "Kirish muvaffaqiyatsiz");
     }
   }
@@ -59,6 +63,7 @@ export default function LoginPage() {
       const result = login(account.email, account.password);
       setLoading(false);
       if (result.success) {
+        logInfo("Foydalanuvchi (Quick Login) tizimga kirdi", "Auth", `Role: ${account.role}, Email: ${account.email}`);
         toast.success(`${account.label} sifatida kirildi!`);
         router.push(ROLE_ROUTES[account.role]);
       }

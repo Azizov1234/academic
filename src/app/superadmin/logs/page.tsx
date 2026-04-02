@@ -7,41 +7,16 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
-import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
-import { Activity, AlertCircle, AlertTriangle, Bug, Terminal, Info, Search, Filter, RefreshCw, Calendar, ChevronRight } from "lucide-react";
+import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger, DialogDescription } from "@/components/ui/dialog";
+import { Activity, AlertCircle, AlertTriangle, Bug, Terminal, Info, Search, Filter, RefreshCw, Calendar, ChevronRight, Trash2 } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { format } from "date-fns";
+import { useLoggerStore, LogLevel, SystemLog } from "@/lib/logger-store";
 
-type LogLevel = "INFO" | "WARNING" | "ERROR" | "DEBUG";
 
-interface SystemLog {
-  id: string;
-  timestamp: string;
-  level: LogLevel;
-  source: "Auth" | "API" | "Database" | "Payment" | "System";
-  message: string;
-  details?: string;
-  statusCode?: number;
-  userId?: string;
-  ip?: string;
-}
-
-const mockLogs: SystemLog[] = [
-  { id: "LOG-001", timestamp: "2025-02-15T08:30:12Z", level: "ERROR", source: "Auth", message: "Failed login attempt: Invalid password", statusCode: 401, ip: "192.168.1.104", details: "User ID: usr_789456, Method: POST /api/auth/login" },
-  { id: "LOG-002", timestamp: "2025-02-15T08:31:05Z", level: "INFO", source: "Auth", message: "User successfully authenticated", statusCode: 200, userId: "usr_123456", ip: "10.0.0.5" },
-  { id: "LOG-003", timestamp: "2025-02-15T08:35:40Z", level: "WARNING", source: "Database", message: "High latency detected on query execution", details: "Query taking > 2000ms on table 'attendances'", statusCode: 200 },
-  { id: "LOG-004", timestamp: "2025-02-15T08:42:10Z", level: "DEBUG", source: "System", message: "Cron job triggered: calculate_weekly_streak" },
-  { id: "LOG-005", timestamp: "2025-02-15T08:45:00Z", level: "INFO", source: "Payment", message: "Payment webhook received successfully", statusCode: 200, details: "Provider: Click, Amount: 400000 UZS" },
-  { id: "LOG-006", timestamp: "2025-02-15T08:50:22Z", level: "ERROR", source: "Database", message: "Connection pool exhausted", statusCode: 500, details: "Max connections (100) reached. Check unclosed connections." },
-  { id: "LOG-007", timestamp: "2025-02-15T09:00:10Z", level: "INFO", source: "API", message: "Homework submitted by student", statusCode: 201, userId: "usr_445566" },
-  { id: "LOG-008", timestamp: "2025-02-15T09:05:00Z", level: "WARNING", source: "API", message: "Rate limit approach for IP", ip: "84.54.12.33", details: "90 requests per minute from single origin" },
-  { id: "LOG-009", timestamp: "2025-02-15T09:12:33Z", level: "DEBUG", source: "API", message: "Fetching user analytics payload constructed", details: "Size: 45KB, Redis Cache Hit" },
-  { id: "LOG-010", timestamp: "2025-02-15T09:20:01Z", level: "ERROR", source: "Payment", message: "S3 Upload failed for receipt PDF", statusCode: 502, details: "Timeout waiting for AWS response" },
-  { id: "LOG-011", timestamp: "2025-02-15T09:25:00Z", level: "INFO", source: "System", message: "Daily backup completed successfully", details: "Size: 2.4GB, S3 path: /backups/db/daily/" },
-  { id: "LOG-012", timestamp: "2025-02-15T09:30:00Z", level: "INFO", source: "Auth", message: "New mentor account created", userId: "usr_998877" },
-];
 
 export default function SuperAdminLogsPage() {
+  const { logs, clearLogs } = useLoggerStore();
   const [search, setSearch] = useState("");
   const [levelFilter, setLevelFilter] = useState<string>("ALL");
   const [sourceFilter, setSourceFilter] = useState<string>("ALL");
@@ -68,7 +43,7 @@ export default function SuperAdminLogsPage() {
   };
 
   // Filter Logic
-  const filteredLogs = mockLogs.filter(log => {
+  const filteredLogs = logs.filter(log => {
     const matchesSearch = log.message.toLowerCase().includes(search.toLowerCase()) || 
                           log.id.toLowerCase().includes(search.toLowerCase()) ||
                           log.source.toLowerCase().includes(search.toLowerCase());
@@ -78,7 +53,7 @@ export default function SuperAdminLogsPage() {
     return matchesSearch && matchesLevel && matchesSource;
   });
 
-  const selectedLog = mockLogs.find(l => l.id === openLogId);
+  const selectedLog = logs.find(l => l.id === openLogId);
 
   return (
     <DashboardLayout title="Tizim Loglari">
@@ -87,11 +62,11 @@ export default function SuperAdminLogsPage() {
         {/* Header Stats */}
         <div className="grid grid-cols-2 md:grid-cols-5 gap-3">
           {[
-            { label: "Barcha Loglar", value: mockLogs.length, icon: Terminal, color: "text-foreground" },
-            { label: "Errors", value: mockLogs.filter(l => l.level === "ERROR").length, icon: AlertCircle, color: "text-red-500" },
-            { label: "Warnings", value: mockLogs.filter(l => l.level === "WARNING").length, icon: AlertTriangle, color: "text-yellow-500" },
-            { label: "Infos", value: mockLogs.filter(l => l.level === "INFO").length, icon: Info, color: "text-blue-500" },
-            { label: "Debugs", value: mockLogs.filter(l => l.level === "DEBUG").length, icon: Bug, color: "text-gray-500" },
+            { label: "Barcha Loglar", value: logs.length, icon: Terminal, color: "text-foreground" },
+            { label: "Errors", value: logs.filter(l => l.level === "ERROR").length, icon: AlertCircle, color: "text-red-500" },
+            { label: "Warnings", value: logs.filter(l => l.level === "WARNING").length, icon: AlertTriangle, color: "text-yellow-500" },
+            { label: "Infos", value: logs.filter(l => l.level === "INFO").length, icon: Info, color: "text-blue-500" },
+            { label: "Debugs", value: logs.filter(l => l.level === "DEBUG").length, icon: Bug, color: "text-gray-500" },
           ].map((stat, idx) => (
             <Card key={idx} className="bg-card shadow-sm border-border">
               <CardContent className="p-4 flex flex-col justify-center items-center text-center">
@@ -142,16 +117,21 @@ export default function SuperAdminLogsPage() {
                     <SelectItem value="API">API</SelectItem>
                     <SelectItem value="Database">Database</SelectItem>
                     <SelectItem value="System">System</SelectItem>
-                    <SelectItem value="Payment">Payment</SelectItem>
-                  </SelectContent>
-                </Select>
-              </div>
-              <Button variant="outline" size="sm" className="gap-2" onClick={() => { setSearch(""); setLevelFilter("ALL"); setSourceFilter("ALL"); }}>
-                <RefreshCw className="h-4 w-4" /> Tozalamoq
-              </Button>
-            </div>
-          </CardContent>
-        </Card>
+                <SelectItem value="Client">Client</SelectItem>
+              </SelectContent>
+            </Select>
+          </div>
+          <div className="flex gap-2 w-full sm:w-auto">
+            <Button variant="outline" size="sm" className="gap-2 flex-1 sm:flex-none text-red-500 hover:text-red-600 hover:bg-red-50" onClick={clearLogs}>
+              <Trash2 className="h-4 w-4" /> Tozalash
+            </Button>
+            <Button variant="outline" size="sm" className="gap-2 flex-1 sm:flex-none" onClick={() => { setSearch(""); setLevelFilter("ALL"); setSourceFilter("ALL"); }}>
+              <RefreshCw className="h-4 w-4" /> Reset
+            </Button>
+          </div>
+        </div>
+      </CardContent>
+    </Card>
 
         {/* Logs Table */}
         <Card className="border-border shadow-sm overflow-hidden line-clamp-none">
